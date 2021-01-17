@@ -1,0 +1,232 @@
+/* reset all stylings */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: rgba(255, 255, 255, 0.9);
+    letter-spacing: 4px;
+}
+
+body {
+    width: 100%;
+    background-color: #0e1726;
+    background-image: url(./images/background-link.svg);
+    background-blend-mode: color-dodge;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50%;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-widget, .about-widget {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: calc(100vh - 64px);
+}
+
+
+.about-widget {
+    padding: 64px;
+}
+
+.about-widget-content {
+    background-color: #060818a1;
+    padding: 96px;
+    border-radius: 8px;
+    width: 75%;
+}
+
+.error {
+    color: rgb(255, 0, 0);
+    border: 1px solid rgba(255, 0, 0,0.5);
+}
+
+h1 {
+    display: block;
+    margin-bottom: 32px;
+}
+
+.about-widget p, h1, .alert p {
+    color:rgba(255, 255, 255, 0.8);
+}
+
+.about-widget-content p {
+    line-height: 28px;
+    letter-spacing: 2px;
+    padding-right: 64px;
+}
+
+.input-wrapper {
+    display: inline;
+}
+
+input {
+    padding: 16px 24px;
+    background-color: #060818;
+    border: none;
+    font-size: 24px;
+    border-radius: 8px;
+}
+
+input[type=submit] {
+    color: rgba(255, 255, 255, 0.9);
+    background-color: #080706af;
+}
+
+input[type=submit]:hover {
+    cursor: pointer;
+    box-shadow: 0px 2px 11px 0px rgba(21, 25, 54, 0.39);
+    border-radius: 16px;
+}
+
+
+footer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 80px;
+}
+
+footer a {
+    font-size: 12px;
+    padding: 4px;
+}
+
+@media (max-width: 1024px) {
+    .about-widget {
+        padding: 32px;
+    }
+
+    .about-widget-content {
+        padding: 48px;
+    }
+}
+
+@media (max-width: 764px) {
+    .alert-widget {
+        left: 30%;
+    }
+    body {
+        background-size: contain;
+    }
+    input {
+        padding: 12px 12px;
+    }
+    .about-widget-content p, input {
+        font-size: 16px;
+    }
+    .about-widget-content {
+        width: 90%;
+    }
+     .about-widget {
+        padding: 16px;
+    }
+
+    .about-widget-content {
+        padding: 32px;
+    }
+}
+
+.alert-widget {
+    position: absolute;
+    right: calc(50% - 100px);
+    top: calc(50% - 100px);
+    width: 300px;
+    background-color:rgba(6, 11, 82, 0.9);
+    border-radius: 10px;
+    box-shadow: 0px 2px 11px 0px rgba(0, 0, 0, 0.75);
+}
+
+.alert-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    margin: -10px 0px 0px -5px;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.alert {
+    height: 300px;
+    padding: 25px;
+}
+
+.alert input {
+    padding: 12px;
+    font-size: 14px;
+    color:rgba(255, 255, 255, 0.8);
+    margin-bottom: 4px;
+}
+
+.alert p {
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 592px) {
+    .alert-widget {
+        left: 10%;
+    }
+    input {
+        margin-top: 16px;
+    }
+
+    .about-widget {
+        padding: 8px;
+    }
+
+    .about-widget-content {
+        width: 99%;
+        padding: 8px 8px 8px 14px;
+    }
+
+    .about-widget-content p {
+        padding-left: 0px;
+    }
+
+    input[type=submit] {
+        align-self: center;
+        display: flex;
+        justify-self: center;
+    }
+    .input-wrapper {
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-direction: column;
+    }
+    footer {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px 40px;
+    }
+}
+
+.animation {
+  animation-name: basic;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+}
+
+@keyframes basic {
+  0% {transform: scale(0.1,0.1)}
+  25% {transform: scale(0.2,0.2)}
+  50%   {transform: scale(0.4,0.4)}
+  80%   {transform: scale(0.7,0.7)}
+  90%   {transform: scale(0.8,0.8)}
+  100%   {transform: scale(1.0,1.0)}
+}
