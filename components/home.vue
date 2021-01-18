@@ -39,6 +39,9 @@
 </template>
 
 <script>
+
+import { siteUrl } from '../assets/config'
+
 export default {
   name: 'Home',
   data () {
@@ -47,13 +50,12 @@ export default {
       error: false,
       alert: false,
       slug: '',
-      secret: '',
-      siteUrl: 'http://localhost:3000/'
+      secret: ''
     }
   },
   computed: {
     fullSlug () {
-      return `${this.siteUrl}${this.slug}`
+      return `${siteUrl}${this.slug}`
     },
     secretUrl () {
       return `${this.fullSlug}/${this.secret}`

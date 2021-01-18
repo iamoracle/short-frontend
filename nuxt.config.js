@@ -8,15 +8,10 @@ export default {
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' }
+      { hid: 'description', name: 'description', content: 'open source link shortener' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ],
-    script: [
-      {
-        src: 'https://hcaptcha.com/1/api.js'
-      }
     ],
   },
 
@@ -54,7 +49,7 @@ export default {
   build: {},
   proxy: {
     '/api' : {
-      target: 'http://127.0.0.1:8000',
+      target: 'https://iamshort.pythonanywhere.com/',
       pathRewrite: {
         '^/api' : ''
       }
