@@ -1,6 +1,6 @@
 # Short - Open Source Link Shortening Website
 
-This is an Open Source Link Shortening website written in Django and NuxtJS. With a single click, you can shorten any valid URL.
+This is an open source Link shortening Progressive Web App written in Django and NuxtJS. With a single click, you can shorten any valid URL.
 
 The website is decoupled into the frontend and the backend which is served over an API using Django Restframework. Please note, the above package contains only the frontend! You can find the backend [here](https://github.com/iamoracle/short). A live demo of this project can be found on [netlify](https://angry-noyce-464939.netlify.app/).
 
